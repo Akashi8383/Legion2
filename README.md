@@ -1,1 +1,1 @@
-Open Legion.html first, because it is the main page ^^
+Legion.html is my main file
