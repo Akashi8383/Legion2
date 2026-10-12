@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; URL=legion/Legion.html">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Redirecting to Legion</title>
+  <script>
+    // Fallback JS redirect in case meta-refresh is blocked.
+    (function(){
+      var target = 'legion/Legion.html';
+      // Ensure we keep the current repository path as base
+      var base = window.location.pathname;
+      if (!base.endsWith('/')) base = base.substring(0, base.lastIndexOf('/')+1);
+      window.location.replace(base + target);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to <a href="legion/Legion.html">legion/Legion.html</a>. If you are not redirected, click the link.</p>
+</body>
+</html>
