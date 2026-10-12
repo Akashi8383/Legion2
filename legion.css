@@ -12,7 +12,92 @@ html, body{
     scroll-behavior: smooth;
 }
 
-  
+  @keyframes appear{
+    from{
+        opacity: 0;
+         transform: scale(0.4);
+    }
+    to {
+        opacity: 1;
+       transform: scale(1);
+    }
+}
+
+
+.box1, .box3, .box4{
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+ 
+.box4{
+    animation: none;
+}
+
+.box4 .songlist > div{
+    animation: song-card-enter 1s linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 100%;
+}
+
+@keyframes song-card-enter{
+    from{
+        opacity: 0;
+        scale: 0.96;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+ 
+.scroll{
+    timeline-scope: --profile-box2-entry;
+}
+
+.box2{
+    view-timeline-name: --profile-box2-entry;
+}
+
+.box1{
+    animation-name: appear-position-safe;
+}
+
+.box3{
+    animation-name: appear-position-safe;
+    animation-timeline: --profile-box2-entry;
+    animation-range: entry 0% cover 30%;
+}
+
+ 
+
+@keyframes appear-position-safe-reversible{
+    0%, 100%{
+        opacity: 0;
+        scale: 0.7;
+    }
+    50%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+ 
+
+@keyframes appear-position-safe{
+    from{
+        opacity: 0;
+        scale: 0.7;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+ 
+
+
   
 
 #moon {
